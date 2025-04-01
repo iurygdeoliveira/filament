@@ -2,5 +2,9 @@
   {
     "type": "sqlite",
     "path": "/media/iurygdeoliveira/projetos/starter-kit/database/database.sqlite"
+  },
+  {
+    "type": "sqlite",
+    "path": "/media/iurygdeoliveira/projetos/filament/database/database.sqlite"
   }
 ]
