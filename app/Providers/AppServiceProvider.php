@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
     {
         if ($this->app->environment('local')) {
             $this->app->register(TelescopeServiceProvider::class);
+            // $this->app->singleton(\Faker\Generator::class, fn () => \Faker\Factory::create('pt_BR'));
         }
     }
 

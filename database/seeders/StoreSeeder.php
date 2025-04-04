@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Store;
 use Illuminate\Database\Seeder;
 
 class StoreSeeder extends Seeder
@@ -12,6 +14,6 @@ class StoreSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Store::factory(20)->create();
     }
 }
