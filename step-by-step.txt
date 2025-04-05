@@ -12,6 +12,7 @@
    sail composer require filament/actions:"^3.3" -W
    sail artisan filament:install --actions
    sail artisan vendor:publish --tag=filament-config
+   sail artisan storage:link
 8: sail composer require laravel/pint --dev
 9: sail composer require rector/rector --dev
 10: sail composer require laradumps/laradumps ^4.0 --dev -W

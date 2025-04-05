@@ -28,16 +28,18 @@ class StoreResource extends Resource
     {
         return $form->columns(1)
             ->schema([
-                TextInput::make('name'),
-                TextInput::make('phone')
+                TextInput::make('name')->required(),
+                TextInput::make('phone')->required()
                     ->mask('(99) 99999-9999')
                     ->tel()
                     ->placeholder('(99) 99999-9999')
-                    ->regex('/^\([1-9]{2}\) 9\d{4}-\d{4}$/'),
-                RichEditor::make('about'),
+                    ->regex('/^\([1-9]{2}\) 9\d{4}-\d{4}$/')
+                    ->required(),
+                RichEditor::make('about')->required(),
                 FileUpload::make('logo')
                     ->directory('stores')
-                    ->disk('public'),
+                    ->disk('public')
+                    ->image(),
 
             ]);
     }

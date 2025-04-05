@@ -16,7 +16,10 @@ class CreateStore extends CreateRecord
     protected function getCreatedNotification(): ?Notification
     {
         return Notification::make()
-            ->title('Empresa criada com sucesso')
-            ->seconds(5);
+            ->title('Loja criada com sucesso')
+            ->success()
+            ->color('success')
+            ->seconds(10)
+            ->send();
     }
 }
